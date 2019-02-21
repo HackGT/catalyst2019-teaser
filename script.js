@@ -43,16 +43,25 @@ function highlightLink(linkIndex) {
 for (let i = 0; i < navLinks.length; i++) {
     navLinks[i].onclick = function() {
         highlightLink(i)
+        uncheck()
     }
 }
 
-window.onload = function() {
-    var index = states.indexOf(window.location.hash)
-    if (index != -1) {
-        for (var i = 0; i < navLinks.length; i++) {
-            highlightLink(index)
+
+function handleScroll() {
+    for (var i = navLinks.length - 1; i >= 0; i--) {
+        var relevantId = navLinks[i].getAttribute('href').slice(1)
+        if (document.getElementById(relevantId).getBoundingClientRect().y <= 20) {
+            highlightLink(i)
+            return
         }
-    } else {
-        highlightLink(0)
     }
+}
+
+window.onload = handleScroll
+document.getElementById('content').onscroll = handleScroll
+
+var checkbox = document.getElementById('hamburger-input')
+function uncheck() {
+    checkbox.checked = false
 }

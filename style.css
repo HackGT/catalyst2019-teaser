@@ -2,7 +2,7 @@
 
 body {
     background-color: #1a1a1a;
-    color: white;
+    color: #e6e6e6;
     margin: 0;
     height: 100%;
     font-family: 'Raleway', sans-serif;
@@ -13,6 +13,21 @@ body {
 #container {
     display: flex;
     width: 100vw;
+}
+
+.container {
+    display: flex;
+}
+
+.col {
+    flex: 1;
+}
+
+.col img {
+    max-width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
 }
 
 nav ul {
@@ -57,9 +72,32 @@ section:not(#home) {
     padding: 5%;
 }
 
-section:not(#home) div {
+section:not(#home) > div {
     min-height: 90%;
     background-color: rgba(0, 0, 0, 0.8);
+    padding: 2em 3em;
+}
+
+section:not(#home) h1 {
+    font-size: 3em;
+}
+
+section:not(#home) p {
+    font-size: 1.25em;
+    /*color: #999;*/
+}
+
+#tracks .container .col .container .col:not(.track-icon) {
+    margin: auto 0;
+    font-size: 1.25em;
+}
+
+#tracks .container .col:not(:first-of-type) .container {
+    flex-direction: row-reverse;
+}
+
+.col.track-icon {
+    flex: 2;
 }
 
 li {
@@ -128,6 +166,19 @@ h1, h2, h3 {
     display: none;
 }
 
+#schedule img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+#schedule p {
+    text-align: center;
+}
+
+#faq p:nth-of-type(2n - 1) {
+    text-decoration: underline;
+}
 
 @media only screen and (max-width: 980px) {
     #countdown {
@@ -209,4 +260,18 @@ h1, h2, h3 {
         opacity: 0;
     }
 
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        display: block;
+    }
+    .col:not(.track-icon) {
+        font-size: 1.125em;
+        text-align: center;
+    }
+    .col:not(.track-icon) p {
+        margin: 0;
+        padding: 0;
+    }
 }
