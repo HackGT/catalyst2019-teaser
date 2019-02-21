@@ -170,6 +170,7 @@ h1, h2, h3 {
         display: block;
         border-radius: 0.25em;
         margin: 1em 0;
+        transition: 0.25s;
     }
 
     ul {
@@ -194,6 +195,18 @@ h1, h2, h3 {
 
     #hamburger-input:checked ~ ul {
         left: 0;
+    }
+
+    #hamburger-input:checked ~ #hamburger-label span:first-of-type {
+        transform: translateY(1.25em) rotate(45deg);
+    }
+
+    #hamburger-input:checked ~ #hamburger-label span:last-of-type {
+        transform: translateY(-1.25em) rotate(-45deg);
+    }
+
+    #hamburger-input:checked ~ #hamburger-label span:not(:first-of-type):not(:last-of-type) {
+        opacity: 0;
     }
 
 }
