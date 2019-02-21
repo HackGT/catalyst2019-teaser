@@ -6,11 +6,17 @@ body {
     margin: 0;
     height: 100%;
     font-family: 'Raleway', sans-serif;
+    display: block;
+    overflow-y: hidden;
 }
 
-nav, #content {
-    display: inline-block;
-    float: left;
+#container {
+    display: flex;
+    width: 100vw;
+}
+
+nav ul {
+    padding: 0;
 }
 
 nav a {
@@ -20,6 +26,7 @@ nav a {
     text-decoration: none;
     padding: 0.25em;
     color: #999;
+    transition: 0.5s color;
 }
 
 nav a.active {
@@ -27,16 +34,18 @@ nav a.active {
 }
 
 nav {
-    width: 20%;
+    height: 100vh;
+    padding: 0.5em 2em;
 }
 
 #content {
     background-image: url('assets/newdoodles.svg');
     background-size: cover;
-    height: 100%;
-    width: 80%;
+    height: 100vh;
+    flex: 1;
     background-repeat: no-repeat;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-position: center;
 }
 
@@ -66,7 +75,6 @@ h1, h2, h3 {
     text-align: center;
     height: 100%;
     margin: 0;
-    /*vertical-align: middle;*/
 }
 
 #splash-text > h1 {
@@ -97,6 +105,7 @@ h1, h2, h3 {
 }
 
 #countdown div {
+    width: 1.5em;
     margin: 0.25em;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 0.75em;
