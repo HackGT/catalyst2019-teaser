@@ -216,11 +216,11 @@ h1, h2, h3 {
 
     #hamburger-label span {
         width: 2em;
-        height: 0.25em;
+        height: 4px;/*the bars are not uniform height on ems for some reason; think it's a chrome bug or smthng idk*/
         background-color: white;
         display: block;
-        border-radius: 0.25em;
-        margin: 1em 0;
+        /*border-radius: 0.25em;*/
+        margin: 0.5em 0;
         transition: 0.25s;
     }
 
@@ -249,11 +249,11 @@ h1, h2, h3 {
     }
 
     #hamburger-input:checked ~ #hamburger-label span:first-of-type {
-        transform: translateY(1.25em) rotate(45deg);
+        transform: translateY(0.8em) rotate(45deg);
     }
 
     #hamburger-input:checked ~ #hamburger-label span:last-of-type {
-        transform: translateY(-1.25em) rotate(-45deg);
+        transform: translateY(-0.8em) rotate(-45deg);
     }
 
     #hamburger-input:checked ~ #hamburger-label span:not(:first-of-type):not(:last-of-type) {
