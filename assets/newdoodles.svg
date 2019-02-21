@@ -72,11 +72,23 @@
 	.st66{stroke:url(#SVGID_66_);}
 
 	path {
+		stroke-width: 3px;
+		fill: none;
 		stroke-dasharray: 5000;
 		stroke-dashoffset: 5000;
-		stroke-width: 3px;
 		animation: dash 12s ease-in forwards;
-		fill: none;
+	}
+
+	g:nth-of-type(4n) g path {
+		animation-delay: 3s;
+	}
+
+	g:nth-of-type(4n + 1) g path {
+		animation-delay: 6s;
+	}
+
+	g:nth-of-type(4n + 2) g path {
+		animation-delay: 9s;
 	}
 
 	@keyframes dash {
