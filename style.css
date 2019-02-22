@@ -44,8 +44,14 @@ nav a {
     transition: 0.5s color;
 }
 
-nav a.active {
-    color: #e6e6e6;
+nav a.active span {
+    /*color: #e6e6e6;*/
+    /*background: linear-gradient(to right, #30CFD0 0%, #330867 100%);*/
+    /*background: linear-gradient(to right, #ff7675 0%, #fab1a0, #fdcb6e, #00b894, #0984e3, #6c5ce7 100%);*/
+    background: linear-gradient(to right, #5900FF 0%, #B600BC, #DA349D, #D57B9B, #D1B499, #CCF696, #AEFAA4, #4EE8D1, #2CE1E0, #00D9F5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
 
 nav {
