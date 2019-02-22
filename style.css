@@ -274,4 +274,18 @@ h1, h2, h3 {
         margin: 0;
         padding: 0;
     }
+
+    #splash-text, #countdown {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    #splash-text {
+        font-size: 0.8em;
+    }
+
+    #countdown div {
+        font-size: 1.5em;
+    }
 }
