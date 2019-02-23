@@ -44,6 +44,10 @@ nav a {
     transition: 0.5s color;
 }
 
+a {
+    color: white;
+}
+
 nav a.active span {
     /*color: #e6e6e6;*/
     /*background: linear-gradient(to right, #30CFD0 0%, #330867 100%);*/
@@ -134,7 +138,7 @@ section:not(#home) p {
     height: 100%;
     width: 90%;
     padding: 0.25em;
-    
+
     display: flex;
     justify-content: center;
     align-content: center;
@@ -222,7 +226,14 @@ h1, h2, h3 {
 }
 
 #faq p:nth-of-type(2n - 1) {
-    text-decoration: underline;
+    font-size: 1.25em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#faq p:nth-of-type(2n) {
+    font-size: 1em;
+    padding-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 980px) {
