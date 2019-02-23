@@ -93,7 +93,7 @@ section:not(#home) p {
     /*color: #999;*/
 }
 
-#tracks .container .col .container .col:not(.track-icon) {
+#tracks .container .col .container .col:not(.track-description) {
     margin: auto 0;
     font-size: 1.25em;
 }
@@ -102,8 +102,47 @@ section:not(#home) p {
     flex-direction: row-reverse;
 }
 
-.col.track-icon {
+#tracks .container .container {
+    position: relative;
+}
+
+.col.track-description {
     flex: 2;
+}
+
+#tracks .container .container .col {
+    transition: 0.25s all;
+}
+
+#tracks .container .container:hover .col {
+    opacity: 0;
+}
+
+#tracks .container .container:hover .track-text {
+    opacity: 1;
+}
+
+
+
+.track-text {
+    font-size: 0.8em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.25s all;
+    height: 100%;
+    width: 90%;
+    padding: 0.25em;
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.track-text p {
+    vertical-align: middle;
 }
 
 li {
@@ -272,11 +311,11 @@ h1, h2, h3 {
     .container {
         display: block;
     }
-    .col:not(.track-icon) {
+    .col:not(.track-description) {
         font-size: 1.125em;
         text-align: center;
     }
-    .col:not(.track-icon) p {
+    .col:not(.track-description) p {
         margin: 0;
         padding: 0;
     }
