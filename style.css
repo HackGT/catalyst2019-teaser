@@ -216,6 +216,7 @@ h1, h2, h3 {
 #countdown {
     margin: 2.5em;
     text-align: right;
+    float: right;
 }
 
 #countdown div {
@@ -225,7 +226,7 @@ h1, h2, h3 {
     background-color: rgba(0, 0, 0, 0.95);
     padding: 0.75em;
     font-size: 2.5em;
-    float: right;
+    float: left;
     display: inline-block;
     text-align: center;
 }
@@ -395,10 +396,6 @@ h1, h2, h3 {
     .track-text p {
         background-color: black;
     }
-
-    /*#splash-text, #countdown {
-        font-size: 0.9em;
-    }*/
 }
 
 @media only screen and (max-width: 580px) {
