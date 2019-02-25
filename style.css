@@ -201,6 +201,10 @@ h1, h2, h3 {
     text-align: center;
 }
 
+#splash-parent {
+    width: 100%;
+}
+
 #splash-text {
     background-color: rgba(0, 0, 0, 0.95);
     padding: 0.5em 1em;
@@ -215,7 +219,7 @@ h1, h2, h3 {
 
 #countdown {
     margin: 2.5em;
-    text-align: right;
+    text-align: center;
     float: right;
 }
 
