@@ -135,6 +135,10 @@ section:not(#home) p {
     flex: 2;
 }
 
+#tracks .container .container .col p {
+    text-decoration: underline;
+}
+
 #tracks .container .container .col {
     transition: 0.25s all;
 }
@@ -164,6 +168,8 @@ section:not(#home) p {
     justify-content: center;
     align-content: center;
     flex-direction: column;
+
+    z-index: 1000;
 }
 
 .track-text p {
@@ -384,6 +390,10 @@ h1, h2, h3 {
     .col:not(.track-description) p {
         margin: 0;
         padding: 0;
+    }
+
+    .track-text p {
+        background-color: black;
     }
 
     /*#splash-text, #countdown {
