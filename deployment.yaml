@@ -1,4 +1,1 @@
-git:
-    remote: https://github.com/HackGT/buildgt2019-teaser.git
-    branch: master
 target_port: 80
