@@ -286,11 +286,16 @@ h1, h2, h3 {
 .sponsor-container {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
     min-height: 50%;
     padding-top: 2em;
+}
+
+.sponsor-container a:first-of-type {
+    grid-column: span 3;
+    max-width: 35%;
 }
 
 .sponsor-container a {
@@ -429,6 +434,9 @@ h1, h2, h3 {
     .sponsor-container a {
         display: block;
         margin: 5em auto;
+    }
+    .sponsor-container a:first-of-type {
+        max-width: none;
     }
 }
 
