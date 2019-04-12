@@ -34,25 +34,27 @@ nav ul {
     padding: 0;
 }
 
-#about ul {
+#about ul, #important-info ul {
     margin: 0;
     padding: 0;
 }
 
-#about ul li {
+#about ul li, #important-info ul li {
     list-style: none;
+    margin-bottom: 0.5em;
 }
 
 #about .col img {
     max-width: 50%;
 }
 
-#about ul li::before {
+#about ul li::before, #important-info ul li::before {
     content: "\2022";
     color: white;
-    font-size: 2em;
+    font-size: 2.5em;
     vertical-align: middle;
-    margin-right: 0.125em;
+    line-height: 0.5;
+    margin: 0 0.125em 0 0.5em;
 }
 
 nav a {
@@ -76,7 +78,7 @@ nav a.active span {
     background: linear-gradient(to right, #5900FF 0%, #B600BC, #DA349D, #D57B9B, #D1B499, #CCF696, #AEFAA4, #4EE8D1, #2CE1E0, #00D9F5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
 }
 
 nav {
@@ -418,7 +420,7 @@ h1, h2, h3 {
     }
     .col:not(.track-description) {
         font-size: 1.125em;
-        text-align: center;
+        /* text-align: center; */
     }
     .col:not(.track-description) p {
         margin: 0;
